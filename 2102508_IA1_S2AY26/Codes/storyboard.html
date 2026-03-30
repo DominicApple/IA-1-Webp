@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Storyboard – Design plan, colour palette and references – Dominic Appleton" />
+  <title>Storyboard | Dominic Appleton</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .wireframe {
+      background: var(--color-white);
+      border: 2px dashed var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 1rem;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: var(--color-text-muted);
+      margin-top: 1rem;
+      overflow-x: auto;
+    }
+    .wf-bar {
+      background: var(--color-nav-bg);
+      color: var(--color-nav-text);
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+      font-size: 0.78rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .wf-section {
+      border: 1px solid var(--color-border);
+      background: var(--color-bg);
+      padding: 0.6rem;
+      margin-bottom: 0.4rem;
+      border-radius: 4px;
+      text-align: center;
+    }
+    .wf-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; margin-bottom: 0.4rem; }
+    .wf-grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 0.4rem; margin-bottom: 0.4rem; }
+    .wf-label { background: #E0D0B0; padding: 0.4rem; border-radius: 3px; text-align: center; font-size: 0.75rem; }
+    .font-demo { padding: 0.75rem 1rem; border: 1px solid var(--color-border); border-radius: var(--radius); margin-bottom: 0.5rem; background: var(--color-white); }
+    .ref-item { padding: 0.6rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.92rem; }
+    .ref-item:last-child { border-bottom: none; }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navigation ──────────────────────────────────────── -->
+  <nav id="main-nav" aria-label="Main Navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">D</div>
+        <span class="logo-text">D. Appleton</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="personality.html">Personality</a></li>
+        <li><a href="development.html">Development</a></li>
+        <li><a href="storyboard.html" class="active">Storyboard</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── Main Content ─────────────────────────────────────── -->
+  <main class="page-wrapper">
+
+    <header style="text-align:center; margin-bottom:2.5rem;">
+      <h1 style="color:var(--color-primary-dark);">Storyboard &amp; Design Plan</h1>
+      <p style="color:var(--color-text-muted); font-style:italic;">
+        Layout designs, colour palette, typography, project links, and references.
+      </p>
+    </header>
+
+    <!-- ── Layout Wireframes ─────────────────────────────── -->
+    <section aria-labelledby="wireframes-heading">
+      <h2 class="section-title" id="wireframes-heading">Layout Designs</h2>
+      <p>
+        Below are two wireframe sketches showing how the site looks on a phone versus a
+        desktop screen. Each box represents a visible section of the page, arranged from
+        top to bottom exactly as a visitor would see it.
+      </p>
+
+      <div class="card-grid">
+
+        <!-- Mobile -->
+        <div class="card">
+          <h3 style="text-align:center; margin-bottom:1rem;">&#128241; Phone Layout</h3>
+          <div class="wireframe">
+            <div class="wf-bar"><span>&#9776; Menu</span><span>D. Appleton</span></div>
+            <div class="wf-section" style="background:#2A0F00; color:#FAE5C0; padding:1rem;">
+              &#128100; Profile Photo<br/>
+              Name &bull; Title &bull; Buttons
+            </div>
+            <div class="wf-section">About Me</div>
+            <div class="wf-section">
+              Cards stacked one per row<br/>
+              <div class="wf-label" style="margin-top:0.3rem;">Card 1</div>
+              <div class="wf-label">Card 2</div>
+              <div class="wf-label">Card 3</div>
+            </div>
+            <div class="wf-section">Favourites Table (scrolls sideways)</div>
+            <div class="wf-section">Useful Links</div>
+            <div class="wf-section" style="background:#1A0800; color:#FAE5C0;">Footer</div>
+          </div>
+          <p style="font-size:0.82rem; color:var(--color-text-muted); margin-top:0.5rem; text-align:center;">
+            Everything stacks in a single column. Navigation collapses into a menu icon.
+          </p>
+        </div>
+
+        <!-- Desktop -->
+        <div class="card">
+          <h3 style="text-align:center; margin-bottom:1rem;">&#128251; Desktop Layout</h3>
+          <div class="wireframe">
+            <div class="wf-bar">
+              <span>&#9632; D. Appleton</span>
+              <span>Home &nbsp;|&nbsp; Resume &nbsp;|&nbsp; Personality &nbsp;|&nbsp; Development &nbsp;|&nbsp; Storyboard</span>
+            </div>
+            <div class="wf-section" style="background:#2A0F00; color:#FAE5C0; padding:1rem;">
+              &#128100; Photo &nbsp;&nbsp;&nbsp;&nbsp; Name &bull; Title &bull; Buttons
+            </div>
+            <div class="wf-section">About Me — full width</div>
+            <div class="wf-section">
+              Three cards side by side<br/>
+              <div class="wf-grid-3" style="margin-top:0.4rem;">
+                <div class="wf-label">Card 1</div>
+                <div class="wf-label">Card 2</div>
+                <div class="wf-label">Card 3</div>
+              </div>
+            </div>
+            <div class="wf-section">
+              Two-column sections (e.g. Hero / Quote side by side)<br/>
+              <div class="wf-grid-2" style="margin-top:0.4rem;">
+                <div class="wf-label">Left column</div>
+                <div class="wf-label">Right column</div>
+              </div>
+            </div>
+            <div class="wf-section">Favourites Table — full width</div>
+            <div class="wf-section" style="background:#1A0800; color:#FAE5C0;">Footer</div>
+          </div>
+          <p style="font-size:0.82rem; color:var(--color-text-muted); margin-top:0.5rem; text-align:center;">
+            Cards sit in a three-column grid. Hero photo and text appear side by side.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── Colour Palette ────────────────────────────────── -->
+    <section aria-labelledby="palette-heading">
+      <h2 class="section-title" id="palette-heading">Colour Palette</h2>
+      <p>
+        Built around warm <strong>beige</strong> and bold <strong>orange</strong> tones,
+        the palette delivers a professional yet warm, approachable feel. Near-black text
+        (#1A0800) on light beige backgrounds ensures strong readability at all screen sizes.
+      </p>
+
+      <div class="color-palette">
+        <div class="color-swatch">
+          <div class="swatch-box" style="background:#F7ECD8;"></div>
+          <div class="swatch-info"><strong>BG Beige</strong><br/>#F7ECD8<br/>rgb(247,236,216)</div>
+        </div>
+        <div class="color-swatch">
+          <div class="swatch-box" style="background:#FDF5E8;"></div>
+          <div class="swatch-info"><strong>Card Beige</strong><br/>#FDF5E8<br/>rgb(253,245,232)</div>
+        </div>
+        <div class="color-swatch">
+          <div class="swatch-box" style="background:#EDD9B5;"></div>
+          <div class="swatch-info"><strong>Dark Beige</strong><br/>#EDD9B5<br/>rgb(237,217,181)</div>
+        </div>
+        <div class="color-swatch">
+          <div class="swatch-box" style="background:#C96A00;"></div>
+          <div class="swatch-info"><strong>Primary Orange</strong><br/>#C96A00<br/>rgb(201,106,0)</div>
+        </div>
+        <div class="color-swatch">
+          <div class="swatch-box" style="background:#A05200;"></div>
+          <div class="swatch-info"><strong>Dark Orange</strong><br/>#A05200<br/>rgb(160,82,0)</div>
+        </div>
+        <div class="color-swatch">
+          <div class="swatch-box" style="background:#E8903A;"></div>
+          <div class="swatch-info"><strong>Secondary</strong><br/>#E8903A<br/>rgb(232,144,58)</div>
+        </div>
+        <div class="color-swatch">
+          <div class="swatch-box" style="background:#1A0800;"></div>
+          <div class="swatch-info"><strong>Text / Nav</strong><br/>#1A0800<br/>rgb(26,8,0)</div>
+        </div>
+        <div class="color-swatch">
+          <div class="swatch-box" style="background:#FFFAF2;"></div>
+          <div class="swatch-info"><strong>Warm White</strong><br/>#FFFAF2<br/>rgb(255,250,242)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Typography ────────────────────────────────────── -->
+    <section aria-labelledby="typography-heading">
+      <h2 class="section-title" id="typography-heading">Typography &amp; Design Tokens</h2>
+
+      <div class="card-grid">
+
+        <div class="card">
+          <h3>Font Families</h3>
+          <div class="font-demo" style="font-family:Georgia,serif;">
+            <strong>Heading – Georgia, serif</strong><br/>
+            <em>H1–H6, section titles, resume headers</em>
+          </div>
+          <div class="font-demo" style="font-family:'Segoe UI',Arial,sans-serif;">
+            <strong>Body – Segoe UI, Arial, sans-serif</strong><br/>
+            <em>Paragraphs, nav links, buttons, captions</em>
+          </div>
+          <div class="font-demo" style="font-family:'Courier New',monospace; font-size:0.88rem;">
+            <strong>Mono – Courier New, monospace</strong><br/>
+            <em>Code snippets, wireframe labels</em>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Design Tokens</h3>
+          <ul>
+            <li><strong>Root font size:</strong> 16px</li>
+            <li><strong>Body font weight:</strong> 400</li>
+            <li><strong>Heading font weight:</strong> 700</li>
+            <li><strong>Line height:</strong> 1.7</li>
+            <li><strong>Border radius (cards):</strong> 8px</li>
+            <li><strong>Border radius (sections):</strong> 16px</li>
+            <li><strong>Max page width:</strong> 1100px</li>
+            <li><strong>Grid gap:</strong> 1.5rem</li>
+            <li><strong>Breakpoints:</strong> 600px · 950px</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Icons &amp; Dimensions</h3>
+          <p>All icons are Unicode emoji — zero external dependencies required.</p>
+          <ul>
+            <li>&#128196; Resume &nbsp;&bull;&nbsp; &#127775; Personality</li>
+            <li>&#127807; Development &nbsp;&bull;&nbsp; &#127756; Vision</li>
+            <li>&#127919; Mission &nbsp;&bull;&nbsp; &#128170; Strength</li>
+            <li>&#127950; Formula 1 &nbsp;&bull;&nbsp; &#127859; Cooking</li>
+            <li>&#127918; Gaming &nbsp;&bull;&nbsp; &#128279; GitHub</li>
+            <li>&#127760; Live Site &nbsp;&bull;&nbsp; &#128218; Books</li>
+          </ul>
+          <p style="font-size:0.8rem; color:var(--color-text-muted); margin-top:0.5rem;">Display size: 2rem via .card-icon class</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── Project Links ─────────────────────────────────── -->
+    <section aria-labelledby="project-links-heading">
+      <h2 class="section-title" id="project-links-heading">Project Links</h2>
+
+      <div class="card-grid">
+
+        <div class="card" style="text-align:center;">
+          <span class="card-icon" role="img" aria-label="GitHub">&#128279;</span>
+          <h3>GitHub Repository</h3>
+          <p>All source code, assets, and deliverables hosted on GitHub under DominicApple.</p>
+          <a href="https://github.com/DominicApple/Web-programming-IA" target="_blank" rel="noopener noreferrer" class="btn mt-2">
+            View Repository
+          </a>
+        </div>
+
+        <div class="card" style="text-align:center;">
+          <span class="card-icon" role="img" aria-label="Live Site">&#127760;</span>
+          <h3>Live Website</h3>
+          <p>Portfolio hosted for free via GitHub Pages — accessible from any device.</p>
+          <a href="https://dominicapple.github.io/Web-programming-IA/2102508_IA1_S2AY26/Codes/index.html" target="_blank" rel="noopener noreferrer" class="btn mt-2">
+            Visit Live Site
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── APA References ────────────────────────────────── -->
+    <section id="references" aria-labelledby="ref-heading">
+      <h2 class="section-title" id="ref-heading">APA References</h2>
+      <p style="font-size:0.88rem; color:var(--color-text-muted); margin-bottom:1rem;">
+        All sources used in creating this portfolio, formatted in APA 7th edition style.
+      </p>
+
+      <article>
+
+        <h3 style="color:var(--color-primary); margin-bottom:1rem; font-size:1rem;">Books</h3>
+
+        <div class="ref-item">
+          Rohn, J., &amp; Widener, C. (2005). <em>Twelve pillars.</em> Tremendous Life Books.
+        </div>
+
+        <div class="ref-item">
+          Clear, J. (2018). <em>Atomic habits: An easy &amp; proven way to build good habits &amp; break bad ones.</em> Avery.
+        </div>
+
+        <h3 style="color:var(--color-primary); margin:1.5rem 0 1rem; font-size:1rem;">Websites</h3>
+
+        <div class="ref-item">
+          Darktrace. (2025). <em>AI cybersecurity solutions.</em>
+          Retrieved March 29, 2026, from
+          <a href="https://www.darktrace.com" target="_blank" rel="noopener noreferrer">https://www.darktrace.com</a>
+        </div>
+
+        <div class="ref-item">
+          University of Technology, Jamaica. (2025). <em>Official website.</em>
+          Retrieved March 29, 2026, from
+          <a href="https://www.utech.edu.jm" target="_blank" rel="noopener noreferrer">https://www.utech.edu.jm</a>
+        </div>
+
+        <div class="ref-item">
+          MDN Web Docs. (2024). <em>CSS: Cascading style sheets.</em> Mozilla Foundation.
+          Retrieved March 29, 2026, from
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer">https://developer.mozilla.org/en-US/docs/Web/CSS</a>
+        </div>
+
+        <div class="ref-item">
+          MDN Web Docs. (2024). <em>HTML: HyperText Markup Language.</em> Mozilla Foundation.
+          Retrieved March 29, 2026, from
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer">https://developer.mozilla.org/en-US/docs/Web/HTML</a>
+        </div>
+
+        <div class="ref-item">
+          Canuli, C. (2026). <em>CIT2011 Web Programming – Individual Assignment #1 brief [Sem 2 AY25-26].</em>
+          School of Computing and Information Technology, University of Technology, Jamaica.
+        </div>
+
+        <div class="ref-item">
+          Formula 1. (2025). <em>Lewis Hamilton – Driver profile.</em>
+          Retrieved March 29, 2026, from
+          <a href="https://www.formula1.com/en/drivers/lewis-hamilton" target="_blank" rel="noopener noreferrer">https://www.formula1.com/en/drivers/lewis-hamilton</a>
+        </div>
+
+        <div class="ref-item">
+          W3Schools. (2024). <em>CSS flexbox.</em>
+          Retrieved March 29, 2026, from
+          <a href="https://www.w3schools.com/css/css3_flexbox.asp" target="_blank" rel="noopener noreferrer">https://www.w3schools.com/css/css3_flexbox.asp</a>
+        </div>
+
+      </article>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ───────────────────────────────────────────── -->
+  <footer>
+    <p>
+      &copy; 2026 <strong>Dominic Appleton</strong> &mdash; CIT2011 Individual Assignment #1
+      &mdash; University of Technology, Jamaica
+    </p>
+    <p style="margin-top:0.4rem;">
+      <a href="mailto:Dominiconeilappleton@gmail.com">Dominiconeilappleton@gmail.com</a>
+    </p>
+  </footer>
+
+</body>
+</html>
